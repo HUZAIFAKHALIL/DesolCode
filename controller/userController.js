@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 
-// Login User function with JWT token generation
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
 

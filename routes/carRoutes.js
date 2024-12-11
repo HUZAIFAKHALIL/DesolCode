@@ -1,12 +1,8 @@
-// src/routes/carRoutes.js
-
 const express = require('express');
 const Car = require('../models/carModel');
-const upload = require('../config/mutler'); // Corrected import path
-
+const upload = require('../config/mutler');
 const router = express.Router();
 
-// POST /api/cars
 router.post('/', upload.array('images', 8), async (req, res) => {
     console.log("Received POST /api/cars request");
     console.log("Request Body:", req.body);
